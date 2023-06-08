@@ -1,0 +1,139 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  animation: changeColor 5s linear infinite;
+}
+
+h1 {
+  color: #333;
+  font-size: 50px;
+}
+
+input[type="text"] {
+  width: 300px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+main {
+  margin-top: 200px;
+}
+
+main p {
+  font-size: 35px;
+  font-family: monospace, sans-serif;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  animation: buttonAnimation 2s infinite;
+}
+
+#answer {
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  animation: textAnimation 2s steps(20) 1s forwards;
+}
+
+#resetButton {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #333;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.ball {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: moveBall 7s infinite;
+  animation: moveBall2 3s infinite;
+}
+@keyframes changeColor {
+  0% {
+    background-color: #f5f5f5;
+  }
+  25% {
+    background-color: #faf1bd;
+  }
+  50% {
+    background-color: #cdfccd;
+  }
+  75% {
+    background-color: #cbeefa;
+  }
+  100% {
+    background-color: #fab8fa;
+  }
+}
+
+@keyframes moveBall {
+  0% {
+    transform: translate(calc(-50% + 2px), calc(50% + 2px));
+  }
+  25% {
+    transform: translate(calc(100vw - 50% - 2px), calc(50% + 2px));
+  }
+  50% {
+    transform: translate(calc(100vw - 50% - 2px), calc(100vh - 50% - 2px));
+  }
+  75% {
+    transform: translate(calc(-50% + 2px), calc(100vh - 50% - 2px));
+  }
+  100% {
+    transform: translate(calc(-50% + 2px), calc(50% + 2px));
+  }
+}
+@keyframes moveBall2 {
+  0% {
+    transform: translate(calc(-50% + 2px), calc(50% + 2px));
+  }
+  25% {
+    transform: translate(calc(100vw - 50% - 2px), calc(50% + 2px));
+  }
+  50% {
+    transform: translate(calc(100vw - 50% - 2px), calc(100vh - 50% - 2px));
+  }
+  75% {
+    transform: translate(calc(-50% + 2px), calc(100vh - 50% - 2px));
+  }
+  100% {
+    transform: translate(calc(-50% + 2px), calc(50% + 2px));
+  }
+}
+
+@keyframes buttonAnimation {
+  0% {
+    border-width: 1px;
+  }
+  50% {
+    border-width: 5px;
+  }
+  100% {
+    border-width: 1px;
+  }
+}
+
+@keyframes textAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
